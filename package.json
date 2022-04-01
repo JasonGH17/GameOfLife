@@ -1,0 +1,20 @@
+{
+  "name": "game-of-life",
+  "version": "0.1.0",
+  "description": "Conway's game of life written in Javascript",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonGH17/GameOfLife.git"
+  },
+  "author": "Jason Ghantous",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JasonGH17/GameOfLife/issues"
+  },
+  "homepage": "https://github.com/JasonGH17/GameOfLife#readme"
+}
