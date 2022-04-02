@@ -1,5 +1,8 @@
-function emulate(grid) {
+const timer = ms => new Promise(res => setTimeout(res, ms));
+
+async function emulate(grid) {
     do {
+        console.clear()
         for (let y = 0; y < grid.blocks.length; y++) {
             for (let x = 0; x < grid.blocks[y].length; x++) {
                 let neighbours = 0;
@@ -22,7 +25,7 @@ function emulate(grid) {
                         neighbours += grid.blocks[y + 1][x + 1].getState;
                     neighbours += grid.blocks[y + 1][x].getState;
                 }
-                
+
                 grid.blocks[y][x].setNeighbours(neighbours);
             }
         }
@@ -42,8 +45,9 @@ function emulate(grid) {
             }
         }
 
-        setTimeout(() => {console.log(grid.blocks)}, 250);
-    } while(false)
+        console.log(grid.grid);
+        await timer(250);
+    } while (true);
 }
 
 export default emulate;

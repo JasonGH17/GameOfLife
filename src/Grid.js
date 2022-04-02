@@ -31,12 +31,17 @@ class Grid {
     get grid() {
         let grid = [];
         for (let w = 0; w < this.width; w++) {
-            grid.push([]);
+            grid.push("")
+            grid[w] += "|";
             for (let h = 0; h < this.height; h++) {
-                grid[w].push(this.blocks[w][h].getState == 0 ? this.charset.empty : this.charset.filled);
+                grid[w] += this.blocks[w][h].getState == 0 ? this.charset.empty : this.charset.filled;
+            }
+            grid[w] += "|";
+            if (w + 1 == this.width) {
+                grid.push("‾".repeat(this.width))
             }
         }
-        return grid;
+        return grid.join("\n");
     }
 }
 
