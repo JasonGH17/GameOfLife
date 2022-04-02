@@ -1,5 +1,6 @@
-import {constructFromFile} from "./Grid.js";
+import { constructFromFile } from "./Grid.js";
+import emulate from "./emulate.js";
 
 const grid = constructFromFile("\\grid.json");
 
-console.log(grid.grid)
+emulate(grid)

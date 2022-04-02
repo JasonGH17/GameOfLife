@@ -25,7 +25,7 @@ class Grid {
     }
 
     setBlock(x, y, state) {
-        this.blocks[x][y - 1].setState(state);
+        this.blocks[x - 1][y - 1].setState(state);
     }
 
     get grid() {
