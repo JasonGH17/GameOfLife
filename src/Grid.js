@@ -56,7 +56,4 @@ function constructFromFile(file) {
     return grid;
 };
 
-
-console.log(constructFromFile("\\grid.json").grid);
-
-export default Grid;
+export { Grid, constructFromFile };

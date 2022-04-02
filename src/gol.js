@@ -1,5 +1,5 @@
-import Grid from "./Grid.js";
+import {constructFromFile} from "./Grid.js";
 
-const grid = new Grid(10, 10, { empty: " ", filled: "#" })
+const grid = constructFromFile("\\grid.json");
 
 console.log(grid.grid)

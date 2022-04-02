@@ -3,7 +3,7 @@ class Block {
         this.state = state;  // 0 = Empty    1 = Filled
     }
 
-    set setState(state) {
+    setState(state) {
         this.state = state;
     }
 
