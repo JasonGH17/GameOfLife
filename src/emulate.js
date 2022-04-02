@@ -27,6 +27,21 @@ function emulate(grid) {
             }
         }
 
+        for (let y = 0; y < grid.blocks.length; y++) {
+            for (let x = 0; x < grid.blocks[y].length; x++) {
+                if (grid.blocks[y][x].neighbours < 2 && grid.blocks[y][x].getState == 1) {
+                    grid.blocks[y][x].setState(0);
+                    grid.blocks[y][x].setNeighbours(0);
+                } else if (grid.blocks[y][x].neighbours > 3 && grid.blocks[y][x].getState == 1) {
+                    grid.blocks[y][x].setState(0);
+                    grid.blocks[y][x].setNeighbours(0);
+                } else if (grid.blocks[y][x].neighbours == 3 && grid.blocks[y][x].getState == 0) {
+                    grid.blocks[y][x].setState(1);
+                    grid.blocks[y][x].setNeighbours(0);
+                }
+            }
+        }
+
         setTimeout(() => {console.log(grid.blocks)}, 250);
     } while(false)
 }
